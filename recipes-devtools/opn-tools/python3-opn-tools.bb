@@ -2,8 +2,8 @@ LICENSE = "CLOSED"
 
 SRC_URI = "git://git@github.com/HULKs/opn-tools.git;branch=main;protocol=https"
 S = "${WORKDIR}/git"
-SRCREV = "dea926bcce6a02ab527532347c80539558562ead"
+SRCREV = "cd1663fa7b93c25705bb4df11eb95929c0e57985"
 
-inherit setuptools3
+inherit python_setuptools_build_meta
 
 BBCLASSEXTEND = "native nativesdk"
