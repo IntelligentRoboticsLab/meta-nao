@@ -4,6 +4,7 @@ LICENSE = "CLOSED"
 SRC_URI = " \
            file://robocup.conf \
            file://nao.rules \
+           file://configure_network \
           "
 
 RDEPENDS:${PN} += "polkit"
@@ -14,6 +15,7 @@ do_install:append() {
   # Enable robocupper mode
   install -o nao -g nao -d ${D}/home/nao/
   install -o nao -g nao -m 0644 ${WORKDIR}/robocup.conf ${D}/home/nao/
+  install -o nao -g nao -m 0755 ${WORKDIR}/configure_network ${D}/home/nao/
 
   # Install nao rules for polkit
   install -d ${D}${datadir}/polkit-1/rules.d/
@@ -38,5 +40,6 @@ USERADD_PARAM:${PN} = "--gid nao \
 
 FILES:${PN} = " \
                /home/nao/robocup.conf \
+               /home/nao/configure_network \
                ${datadir}/polkit-1/rules.d/nao.rules \
               "
