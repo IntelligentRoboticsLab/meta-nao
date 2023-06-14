@@ -2,8 +2,8 @@
 
 set -e
 
-TEAM_NUMBER="8"
-NAO_NUMBER="$1"
+TEAM_NUMBER="$1"
+NAO_NUMBER="$2"
 
 echo "[Match]
 Name=wlan*
