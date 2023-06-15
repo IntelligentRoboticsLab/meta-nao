@@ -9,6 +9,7 @@ SRC_URI = " \
             file://SPL_D.psk \
             file://SPL_E.psk \
             file://SPL_F.psk \
+            file://DNT_5G.psk \
             "
 RDEPENDS:${PN} = "iwd"
 
@@ -23,6 +24,7 @@ do_install() {
     install -m 0600 ${WORKDIR}/SPL_D.psk ${D}/var/lib/iwd/
     install -m 0600 ${WORKDIR}/SPL_E.psk ${D}/var/lib/iwd/
     install -m 0600 ${WORKDIR}/SPL_F.psk ${D}/var/lib/iwd/
+    install -m 0600 ${WORKDIR}/DNT_5G.psk ${D}/var/lib/iwd/
 }
 
 FILES:${PN} = "\
